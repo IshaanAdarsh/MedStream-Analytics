@@ -2,6 +2,10 @@
 
 This guide provides step-by-step instructions for setting up Digital Twin functionality using Eclipse Ditto for your healthcare analytics project. Digital Twins enable virtual representations of physical assets, which can be utilized for predictive maintenance and condition monitoring.
 
+## Eclipse Ditto
+
+Eclipse Ditto™ is a framework for providing the "Digital Twin" pattern for IoT applications in order to interact with IoT devices. That means that Ditto mirrors physical devices as digital representations in the cloud.
+
 ## Prerequisites
 
 - [Eclipse Ditto](https://www.eclipse.org/ditto/) installed and configured.
