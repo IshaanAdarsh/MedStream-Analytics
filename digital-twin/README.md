@@ -6,6 +6,10 @@ This guide provides step-by-step instructions for setting up Digital Twin functi
 
 Eclipse Ditto™ is a framework for providing the "Digital Twin" pattern for IoT applications in order to interact with IoT devices. That means that Ditto mirrors physical devices as digital representations in the cloud.
 
+## Digital Twin 
+
+A digital twin is a virtual representation of an object or system that spans its lifecycle, is updated from real-time data, and uses simulation, machine learning and reasoning to help decision making
+
 ## Prerequisites
 
 - [Eclipse Ditto](https://www.eclipse.org/ditto/) installed and configured.
