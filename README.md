@@ -4,10 +4,10 @@ This project aims to revolutionize healthcare analytics by introducing real-time
 
 ## Table of Contents
 
-- [Project Overview](#project-overview) 
+- [Project Overview](#project-overview)
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
-- [Directory Structure](#directory-structure) 
+- [Directory Structure](#directory-structure)
 - [Usage](#usage)
 - [Components](#components)
 - [Testing](#testing)
@@ -17,12 +17,15 @@ This project aims to revolutionize healthcare analytics by introducing real-time
 ## Project Overview
 
 The current healthcare analytics paradigm primarily relies on scheduled batch processing, resulting in significant latency between data generation and analysis. This project addresses this challenge by:
+
 - Implementing real-time data streaming using Apache Kafka.
 - Developing Apache Flink jobs for event-based data processing and complex event detection.
 - Leveraging Eclipse Ditto for creating virtual representations of healthcare assets (Digital Twins).
 - Providing real-time alerts for critical events and anomalies using CEP algorithms.
 
 ## Prerequisites
+
+Ensure you have the following tools and components installed:
 
 - Java JDK 8 or higher.
 - [Apache Flink](https://flink.apache.org/) installed and configured.
@@ -31,29 +34,44 @@ The current healthcare analytics paradigm primarily relies on scheduled batch pr
 
 ## Installation
 
-1. Clone this repository:
+1. **Clone this repository:**
+
    ```shell
    git clone https://github.com/IshaanAdarsh/healthcare-analytics.git
    cd healthcare-analytics
    ```
 
-2. Configure Apache Flink, Apache Kafka, and Eclipse Ditto according to their respective installation guides.
+2. **Configure Apache Flink, Apache Kafka, and Eclipse Ditto**:
 
-3. Set up the data generator to simulate streaming healthcare data. Follow the instructions in the [data-generator](data-generator/README.md) directory.
+   - Follow their respective installation guides to set them up.
 
-4. Configure and run the Apache Flink jobs for processing streaming data and detecting anomalies. Follow the instructions in the [flink-jobs](flink-jobs/README.md) directory.
+3. **Set up the Data Generator**:
 
-5. Implement Digital Twin functionality using Eclipse Ditto for predictive maintenance and condition monitoring. Follow the instructions in the [digital-twin](digital-twin/README.md) directory.
+   - Simulate streaming healthcare sensor data. Instructions in [data-generator/README.md](data-generator/README.md).
 
-6. Integrate the components for a holistic healthcare analytics solution.
+4. **Configure and Run Apache Flink Jobs**:
+
+   - Process streaming data and detect anomalies. Instructions in [flink-jobs/README.md](flink-jobs/README.md).
+
+5. **Implement Digital Twin with Eclipse Ditto**:
+
+   - Enable predictive maintenance and condition monitoring. Instructions in [digital-twin/README.md](digital-twin/README.md).
+
+6. **Integrate Components**:
+
+   - Integrate different components for a holistic healthcare analytics solution.
 
 ## Directory Structure
 
-- `data-generator`: Simulates streaming healthcare sensor data.
-- `flink-jobs`: Contains Apache Flink jobs for event-based processing and anomaly detection.
-- `digital-twin`: Implements Digital Twin functionality using Eclipse Ditto.
-- `kafka-configuration`: Contains Kafka configuration files and a guide on how to configure Kafka.
-- `README.md`: This main project README file.
+```
+healthcare-analytics/
+│
+├── data-generator/           # Simulates streaming healthcare sensor data
+├── flink-jobs/                # Apache Flink jobs for event-based processing
+├── digital-twin/              # Digital Twin functionality using Eclipse Ditto
+├── kafka-configuration/       # Kafka configuration files and setup guide
+├── README.md                  # Main project README file
+```
 
 ## Usage
 
@@ -69,11 +87,11 @@ The current healthcare analytics paradigm primarily relies on scheduled batch pr
 
 ## Components
 
-- **Data Generator**: Simulates streaming healthcare sensor data. Follow the [data-generator README](data-generator/README.md) for setup instructions.
+- **Data Generator**: Simulates streaming healthcare sensor data. Setup instructions in [data-generator/README.md](data-generator/README.md).
 
-- **Flink Jobs**: Processes streaming data and detects anomalies using CEP. Follow the [flink-jobs README](flink-jobs/README.md) for setup instructions.
+- **Flink Jobs**: Processes streaming data and detects anomalies using CEP. Setup instructions in [flink-jobs/README.md](flink-jobs/README.md).
 
-- **Digital Twin**: Implements virtual representations of healthcare assets for predictive maintenance. Follow the [digital-twin README](digital-twin/README.md) for setup instructions.
+- **Digital Twin**: Implements virtual representations of healthcare assets for predictive maintenance. Setup instructions in [digital-twin/README.md](digital-twin/README.md).
 
 ## Testing
 
