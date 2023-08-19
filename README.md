@@ -7,7 +7,7 @@ This project aims to revolutionize healthcare analytics by introducing real-time
 - [Project Overview](#project-overview) 
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
-- [Directory Structure](#directory-structure)
+- [Directory Structure](#directory-structure) 
 - [Usage](#usage)
 - [Components](#components)
 - [Testing](#testing)
