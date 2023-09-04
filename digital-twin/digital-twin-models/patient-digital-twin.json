@@ -1,0 +1,30 @@
+{
+    "id": "patient",
+    "name": "Patient",
+    "description": "A digital twin representing a patient's health data.",
+    "attributes": {
+      "firstName": {
+        "type": "string",
+        "description": "The first name of the patient."
+      },
+      "lastName": {
+        "type": "string",
+        "description": "The last name of the patient."
+      },
+      "age": {
+        "type": "integer",
+        "description": "The age of the patient."
+      },
+      "heartRate": {
+        "type": "integer",
+        "description": "The current heart rate of the patient.",
+        "unit": "bpm"
+      },
+      "temperature": {
+        "type": "number",
+        "description": "The current body temperature of the patient.",
+        "unit": "°C"
+      }
+    }
+  }
+  
