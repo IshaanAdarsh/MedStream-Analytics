@@ -2,59 +2,49 @@ import org.eclipse.ditto.client.DittoClient;
 import org.eclipse.ditto.client.DittoClients;
 import org.eclipse.ditto.client.configuration.DittoClientConfiguration;
 import org.eclipse.ditto.client.configuration.DittoNamespaceConfiguration;
-import org.eclipse.ditto.client.messaging.dittoProtocol.DittoFeature;
 import org.eclipse.ditto.client.twin.Twin;
-import org.eclipse.ditto.client.twin.TwinKey;
 import org.eclipse.ditto.client.twin.commands.Feature;
 import org.eclipse.ditto.client.twin.commands.PutFeaturesCmd;
 import org.eclipse.ditto.model.base.json.JsonSchemaVersion;
 import org.eclipse.ditto.model.things.FeatureData;
-import org.eclipse.ditto.model.things.Properties;
 
-public class PatientDigitalTwin {
+public class HeartRateDigitalTwin {
 
-    public static void main(String[] args) {
-        // Configure the Ditto client
-        DittoNamespaceConfiguration namespaceConfig = DittoNamespaceConfiguration.newBuilder()
-                .setEndpoint("http://localhost:8080")
-                .setClientId("your-client-id")
-                .build();
+        public static void main(String[] args) {
+                // Configure the Ditto client
+                DittoNamespaceConfiguration namespaceConfig = DittoNamespaceConfiguration.newBuilder()
+                                .setEndpoint("http://localhost:8080")
+                                .setClientId("your-client-id")
+                                .build();
 
-        DittoClientConfiguration clientConfig = DittoClientConfiguration.newBuilder()
-                .setNamespaceConfiguration(namespaceConfig)
-                .build();
+                DittoClientConfiguration clientConfig = DittoClientConfiguration.newBuilder()
+                                .setNamespaceConfiguration(namespaceConfig)
+                                .build();
 
-        DittoClient dittoClient = DittoClients.newInstance(clientConfig);
+                DittoClient dittoClient = DittoClients.newInstance(clientConfig);
 
-        // Create a Digital Twin for a patient
-        Twin twin = dittoClient.twin("your-namespace", "your-thing-id");
+                // Create a Digital Twin for heart rate monitoring
+                Twin twin = dittoClient.twin("your-namespace", "heart-rate-monitor");
 
-        // Define the properties of the patient's Digital Twin
-        Properties properties = Properties.newBuilder()
-                .put("firstName", "John")
-                .put("lastName", "Doe")
-                .put("age", 30)
-                .build();
+                // Create a feature for the heart rate
+                FeatureData heartRateFeature = FeatureData.newBuilder()
+                                .setSchema(JsonSchemaVersion.V_1_0)
+                                .put("heartRate", 70) // Initialize heart rate to 70
+                                .build();
 
-        // Create a feature for the heart rate
-        FeatureData heartRateFeature = FeatureData.newBuilder()
-                .setSchema(JsonSchemaVersion.V_1_0)
-                .put("heartRate", 70)
-                .build();
+                // Create the Digital Twin with the heart rate feature
+                PutFeaturesCmd putFeaturesCmd = PutFeaturesCmd.newBuilder()
+                                .put(Feature.HEART_RATE.getName(), heartRateFeature)
+                                .build();
 
-        // Create the Digital Twin with properties and features
-        PutFeaturesCmd putFeaturesCmd = PutFeaturesCmd.newBuilder()
-                .put(new TwinKey(Feature.HEART_RATE.getName()), heartRateFeature)
-                .build();
+                twin.putFeatures(putFeaturesCmd);
 
-        twin.putFeatures(putFeaturesCmd, properties);
+                // Update the heart rate feature (simulating a change in heart rate)
+                FeatureData updatedHeartRateFeature = FeatureData.newBuilder()
+                                .setSchema(JsonSchemaVersion.V_1_0)
+                                .put("heartRate", 75) // Simulate an increase in heart rate to 75
+                                .build();
 
-        // Update the heart rate feature
-        FeatureData updatedHeartRateFeature = FeatureData.newBuilder()
-                .setSchema(JsonSchemaVersion.V_1_0)
-                .put("heartRate", 75)
-                .build();
-
-        twin.putFeature(new TwinKey(Feature.HEART_RATE.getName()), updatedHeartRateFeature);
-    }
+                twin.putFeature(Feature.HEART_RATE.getName(), updatedHeartRateFeature);
+        }
 }
