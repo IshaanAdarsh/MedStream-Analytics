@@ -1,4 +1,4 @@
-# Healthcare Analytics Project
+# Healthcare Analytics Project:
 
 This project aims to revolutionize healthcare analytics by introducing real-time data streaming, event-based execution, and complex event processing (CEP). The project leverages Apache Flink, Apache Kafka, and Eclipse Ditto to provide real-time insights into healthcare data, enabling timely interventions and proactive patient care.
 
