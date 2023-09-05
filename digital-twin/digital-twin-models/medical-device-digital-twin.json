@@ -1,0 +1,25 @@
+{
+    "id": "medicalDevice",
+    "name": "MedicalDevice",
+    "description": "A digital twin representing a medical monitoring device.",
+    "attributes": {
+      "deviceName": {
+        "type": "string",
+        "description": "The name of the medical device."
+      },
+      "deviceType": {
+        "type": "string",
+        "description": "The type of the medical device."
+      },
+      "status": {
+        "type": "string",
+        "description": "The operational status of the device."
+      },
+      "batteryLevel": {
+        "type": "integer",
+        "description": "The current battery level of the device.",
+        "unit": "percent"
+      }
+    }
+  }
+  
