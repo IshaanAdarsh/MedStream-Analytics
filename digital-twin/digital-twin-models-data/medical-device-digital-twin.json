@@ -1,25 +1,44 @@
 {
-    "id": "medicalDevice",
-    "name": "MedicalDevice",
-    "description": "A digital twin representing a medical monitoring device.",
-    "attributes": {
-      "deviceName": {
-        "type": "string",
-        "description": "The name of the medical device."
-      },
-      "deviceType": {
-        "type": "string",
-        "description": "The type of the medical device."
-      },
-      "status": {
-        "type": "string",
-        "description": "The operational status of the device."
-      },
-      "batteryLevel": {
-        "type": "integer",
-        "description": "The current battery level of the device.",
-        "unit": "percent"
-      }
+  "id": "vitalSignsMonitor",
+  "name": "VitalSignsMonitor",
+  "description": "A digital twin representing a vital signs monitor device.",
+  "attributes": {
+    "deviceName": {
+      "type": "string",
+      "description": "The name of the vital signs monitor."
+    },
+    "deviceType": {
+      "type": "string",
+      "description": "The type of the vital signs monitor.",
+      "value": "Vital Signs Monitor"
+    },
+    "status": {
+      "type": "string",
+      "description": "The operational status of the vital signs monitor.",
+      "value": "Active"
+    },
+    "batteryLevel": {
+      "type": "integer",
+      "description": "The current battery level of the vital signs monitor.",
+      "unit": "percent",
+      "value": 80
+    },
+    "heartRate": {
+      "type": "integer",
+      "description": "The current heart rate measured by the monitor.",
+      "unit": "bpm",
+      "value": 90
+    },
+    "bloodPressure": {
+      "type": "string",
+      "description": "The current blood pressure measurement taken by the monitor.",
+      "value": "120/80 mmHg"
+    },
+    "temperature": {
+      "type": "number",
+      "description": "The current body temperature measured by the monitor.",
+      "unit": "°C",
+      "value": 37.5
     }
   }
-  
+}
