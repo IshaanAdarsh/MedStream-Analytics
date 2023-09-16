@@ -27,6 +27,12 @@ This project, named "Healthcare Analytics," aims to revolutionize healthcare ana
 
 The `GE.ipynb` Jupyter notebook generates a digital twin of a vital signs monitor, which measures the patient's heart rate, temperature, and blood pressure. It is designed to alert doctors and staff by sending SMS and email notifications when a failure signature or stroke risk is triggered.
 
+
+
+https://github.com/IshaanAdarsh/healthcare-analytics/assets/100434702/8e3b8094-a4c0-4594-9385-2288fd2db116
+
+
+
 ## Hackathon Tasks
 
 This project is part of a hackathon, and the following tasks have been completed:
