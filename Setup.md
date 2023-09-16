@@ -1,5 +1,4 @@
-# icu-alarm
-
+# icu-alarm (Steps to Run Application):
 To run your Flink application and the associated Kafka setup, you can follow these step-by-step instructions. This guide assumes that you have already built your Flink application and Kafka topic producer code.
 
 **Step 1: Start ZooKeeper**
