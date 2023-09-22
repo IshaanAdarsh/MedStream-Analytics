@@ -1,6 +1,6 @@
-# Healthcare Analytics Project (Healthcare Analytics)
+# MedStream Analytics (Healthcare Analytics)
 
-This project, named "Healthcare Analytics," aims to revolutionize healthcare analytics by introducing real-time data streaming, event-based execution, and complex event processing (CEP). Leveraging technologies such as Apache Flink, Apache Kafka, and Python Digital Twin, this project provides real-time insights into healthcare data, enabling timely interventions and proactive patient care.
+MedStream Analytics aims to revolutionize healthcare analytics by introducing real-time data streaming, event-based execution, and complex event processing (CEP). Leveraging technologies such as Apache Flink, Apache Kafka, and Python Digital Twin, this project provides real-time insights into healthcare data, enabling timely interventions and proactive patient care.
 
 This project is a participant in the GE Healthcare Precision Care Challenge 2023. Out of numerous entries, we were selected as one of the 12 finalists out of the 447 Teams participating. Our project has consistently demonstrated its innovative potential and earned its place among the top finalists in this prestigious competition.
 
