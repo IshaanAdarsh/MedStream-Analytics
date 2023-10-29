@@ -1,4 +1,4 @@
-# MedStream Analytics (Healthcare Analytics)
+# MedStream Analytics (Healthcare Analytics) 
 
 MedStream Analytics aims to revolutionize healthcare analytics by introducing real-time data streaming, event-based execution, and complex event processing (CEP). Leveraging technologies such as Apache Flink, Apache Kafka, and Python Digital Twin, this project provides real-time insights into healthcare data, enabling timely interventions and proactive patient care.
 
